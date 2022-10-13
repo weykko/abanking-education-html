@@ -11,6 +11,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "ajv": "^8.11.0",
     "node-sass": "^7.0.3"
   },
   "devDependencies": {
