@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -70,6 +71,7 @@ button {
   margin-top: auto;
   margin-bottom: 0;
   vertical-align: middle;
+  opacity: 1;
 }
 .header__buttons {
   display: flex;
@@ -125,7 +127,7 @@ button {
   margin-bottom: 110px;
 }
 .hero__content__title {
-  margin-top: 46px;
+  margin-top: 42px;
   font-size: 50px;
   line-height: 70px;
   margin-bottom: 30px;
@@ -140,13 +142,16 @@ button {
   margin-bottom: 60px;
 }
 .hero__search {
+  background-image: url("../images/search_background.png");
+  background-repeat: no-repeat;
+  background-position: left top;
   width: 497px;
-  height: 64px;
+  height: 68px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #283036;
-  padding: 8px 12px 8px 18px;
+  padding: 8px 12px 8px 20px;
   border-radius: 15px;
 }
 .hero__search__input {
@@ -250,11 +255,11 @@ button {
   font-size: 20px;
   font-weight: 400;
   line-height: 30px;
-  transition: box-shadow 0.3s ease;
+  transition: background-color 0.3s ease;
   text-align: center;
 }
 .tools__load:hover {
-  box-shadow: 0 0 10px #FF6E30;
+  background-color: rgba(40, 48, 54, 0.6);
 }
 
 .card {
@@ -267,9 +272,9 @@ button {
   width: 392px;
   height: 294px;
   padding: 33px;
-  transition: transform 0.8s ease, background-color 0.8s ease, -webkit-backdrop-filter 0.8s ease;
-  transition: transform 0.8s ease, background-color 0.8s ease, backdrop-filter 0.8s ease;
-  transition: transform 0.8s ease, background-color 0.8s ease, backdrop-filter 0.8s ease, -webkit-backdrop-filter 0.8s ease;
+  transition: transform 0.5s ease, background-color 0.5s ease, -webkit-backdrop-filter 0.5s ease;
+  transition: transform 0.5s ease, background-color 0.5s ease, backdrop-filter 0.5s ease;
+  transition: transform 0.5s ease, background-color 0.5s ease, backdrop-filter 0.5s ease, -webkit-backdrop-filter 0.5s ease;
   overflow: hidden;
 }
 .card button {
@@ -368,20 +373,52 @@ button {
 }
 
 .footer {
-  position: relative;
+  background-image: url("../images/footer_background.png");
   margin: 0 auto;
   width: 1224px;
-  height: 253px;
-  background-color: rgba(44, 53, 61, 0.2);
-  border-image-slice: 1;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
-  padding: 55px 83px 56px 82px;
+  height: 257px;
+  padding: 57px 82px 58px 83px;
   border-radius: 25px;
   overflow: hidden;
   margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*
+  Более сложная реализация дизайна футера
+
+  position: relative;
+  background-color: rgba(44, 53, 61, 0.2);
+  border-image-slice: 1;
+
+  &::before {
+      content: '';
+      position: absolute;
+      top: -90px;
+      left: -90px;
+      width: 160px;
+      height: 160px;
+      background: rgba(255, 72, 66, 0.4);
+      border-radius: 50%;
+      border: 2px solid transparent;
+      border-image-source: linear-gradient(92.39deg, rgba(255, 255, 255, 0.05) -4.6%, rgba(255, 255, 255, 0) 96.79%);
+      border-image-slice: 1;
+      pointer-events: none;
+      filter: blur(50px);
+  }
+
+  &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 25px;
+      box-shadow: 0 0 0 2px linear-gradient(92.39deg, rgba(255, 255, 255, 0.05) -4.6%, rgba(255, 255, 255, 0) 96.79%);
+      pointer-events: none;
+  }
+  */
 }
 .footer__title {
   font-size: 24px;
@@ -389,6 +426,7 @@ button {
   line-height: 36px;
   color: #FFFFFF;
   opacity: 80%;
+  margin-bottom: 55px;
 }
 .footer__list {
   list-style: none;
@@ -402,30 +440,4 @@ button {
 }
 .footer__list__item:hover {
   opacity: 0.7;
-}
-.footer::before {
-  content: "";
-  position: absolute;
-  top: -90px;
-  left: -90px;
-  width: 160px;
-  height: 160px;
-  background: rgba(255, 72, 66, 0.4);
-  border-radius: 50%;
-  border: 2px solid transparent;
-  border-image-source: linear-gradient(92.39deg, rgba(255, 255, 255, 0.05) -4.6%, rgba(255, 255, 255, 0) 96.79%);
-  border-image-slice: 1;
-  pointer-events: none;
-  filter: blur(50px);
-}
-.footer::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 25px;
-  box-shadow: 0 0 0 2px linear-gradient(92.39deg, rgba(255, 255, 255, 0.05) -4.6%, rgba(255, 255, 255, 0) 96.79%);
-  pointer-events: none;
 }/*# sourceMappingURL=main.css.map */
